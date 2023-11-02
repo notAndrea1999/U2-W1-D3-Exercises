@@ -1,9 +1,6 @@
 package andreademasi;
 
-import andreademasi.entities.Bevande;
-import andreademasi.entities.Menu;
-import andreademasi.entities.Pizze;
-import andreademasi.entities.Toppings;
+import andreademasi.entities.*;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Scope;
@@ -94,5 +91,14 @@ public class BeansConfiguration {
         return new Menu(pizzeList, toppingsList, drinkList);
     }
 
-
+    @Bean
+    List<ElementiMenu> getList() {
+        List<ElementiMenu> list = new ArrayList();
+        list.add(getSalamiPizza());
+        list.add(getSalamiPizza());
+        list.add(getSalamiPizza());
+        list.add(getLemonade());
+        list.add(getLemonade());
+        return list;
+    }
 }
