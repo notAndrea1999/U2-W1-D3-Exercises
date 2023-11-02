@@ -40,6 +40,10 @@ public class Ordine {
         this.total = this.total + (numeroCoperti * costoCoperto);
     }
 
+    public double getContoCoperti() {
+        return numeroCoperti * costoCoperto;
+    }
+
     @Override
     public String toString() {
         return "Ordine{" +
